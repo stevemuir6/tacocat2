@@ -1,6 +1,8 @@
 
 // // reverse word input from input7 and display in output 7 and in reverse in output6
 
+
+
 document.getElementById("btnRevWord").addEventListener("click", function(){
     let word2 = document.getElementById("input6").value;
     
