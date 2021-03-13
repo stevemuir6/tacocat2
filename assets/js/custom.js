@@ -11,14 +11,23 @@ document.getElementById("btnRevWord").addEventListener("click", function(){
 
      // convert input to lower case
      var word3 = word2.toLowerCase().replace(reg, "")
+     var word5 = word3.split('').length
 
      // Reverse string
     let word4 = word3.split('').reverse().join('');
-    if (word4 == word3){
-        document.getElementById('output7').innerText= `"${word2}" is a Palindrome!`
-    } else {
-        document.getElementById('output7').innerText =`"${word2}" is not a Palindrome!`
+    if(word5 == 0)
+    {
+        document.getElementById('output7').innerText= "You need to enter a word to check"
+    }else{
+        if (word4 == word3){
+            document.getElementById('output7').innerText= `"${word2}" is a Palindrome!`
+        } 
+        
+        else {
+            document.getElementById('output7').innerText =`"${word2}" is not a Palindrome!`
+        }
     }
+    
 });
 
 // clear output 7
