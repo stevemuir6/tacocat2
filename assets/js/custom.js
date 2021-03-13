@@ -13,11 +13,11 @@ document.getElementById("btnRevWord").addEventListener("click", function(){
      var word3 = word2.toLowerCase().replace(reg, "")
 
      // Reverse string
-    let word4 = word2.split('').reverse().join('');
-    if (word4 == word2){
+    let word4 = word3.split('').reverse().join('');
+    if (word4 == word3){
         document.getElementById('output7').innerText= `"${word2}" is a Palindrome!`
     } else {
-        document.getElementById('output7').innerText ="The word you entered is not a Palindrome."
+        document.getElementById('output7').innerText =`"${word2}" is not a Palindrome!`
     }
 });
 
