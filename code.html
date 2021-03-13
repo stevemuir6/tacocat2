@@ -22,6 +22,8 @@
   <!-- CSS Files-->
   <link href="assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
   <link href="assets/css/custom.css" rel="stylesheet" />
+  <link href="assets/css/prism.css" rel="stylesheet" />
+
 </head>
 
 <body class="landing-page">
@@ -85,17 +87,47 @@
             <div class="row align-items-center justify-content-center">
               <div class="col-lg-6 text-center">
                 <h2 class="text-white display-">Taco Cat - Palindrome</h2>
-                <h2 class="display-4 font-weight-normal text-white">JavaScript code example for Taco Cat</h2>
-                <div class="btn-wrapper mt-4">
-                  <a href="solve.html" class="btn btn-secondary btn-icon mt-3 mb-sm-0">
-                    <span class="btn-inner--icon"><i class="fa fa-paw"></i></span>
-                    <span class="btn-inner--text">Give it a Try!</span>
-                  </a>
-                </div>
+                <h2 class="display-4 font-weight-normal text-white">JavaScript code example for Taco Cat</h2>                                          
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="content">
+                <pre data-src="assets/js/custom.js" data-download-link>
+                    <code class="language-css">
+                    // // reverse word input from input7 and display in output 7 and in reverse in output6
+                    
+                    
+                    
+                    document.getElementById("btnRevWord").addEventListener("click", function(){
+                        let word2 = document.getElementById("input6").value;
+                        
+                         // Non-word character regex
+                         let reg = /[\W_]/g
+                    
+                         // convert input to lower case
+                         var word3 = word2.toLowerCase().replace(reg, "")
+                    
+                         // Reverse string
+                        let word4 = word3.split('').reverse().join('');
+                        if (word4 == word3){
+                            document.getElementById('output7').innerText= `"${word2}" is a Palindrome!`
+                        } else {
+                            document.getElementById('output7').innerText =`"${word2}" is not a Palindrome!`
+                        }
+                    });
+                    
+                    // clear output 7
+                    document.getElementById("btnClear2").addEventListener("click", function(){
+                        document.getElementById("input6").value = "";
+                        document.getElementById("output7").innerText = "";
+                    });</code>
+                </pre>
+              </div>
+          </div>
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -152,6 +184,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <script src="assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script src="assets/js/prism.jsp"></script>
   <!-- <script>
     window.TrackJS &&
       TrackJS.install({
